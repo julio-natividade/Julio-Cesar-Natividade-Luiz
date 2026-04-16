@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo - Julio Cesar Natividade Luiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background-color: #eef2f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* HEADER COM FOTO */
+        .header {
+            background: linear-gradient(135deg, #0B2B40 0%, #1C5D6E 100%);
+            color: white;
+            padding: 32px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .header-info h1 {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .header-info .subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            border-left: 4px solid #FFB347;
+            padding-left: 16px;
+            margin: 20px 0 16px 0;
+            opacity: 0.9;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        .contact-bar span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* FOTO */
+        .photo-frame {
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .photo-placeholder {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(145deg, #cbd5e1, #94a3b8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* 2 COLUNAS */
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar {
+            background: #F8FAFC;
+            width: 34%;
+            padding: 40px 28px;
+        }
+
+        .main {
+            width: 66%;
+            padding: 40px 40px 40px 28px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1C5D6E;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FFB347;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        .sidebar .section-title {
+            color: #0B2B40;
+        }
+
+        .info-block {
+            margin-bottom: 32px;
+        }
+
+        .info-block p {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #1e2a36;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin: 0 6px 10px 0;
+            font-weight: 500;
+        }
+
+        .job {
+            margin-bottom: 28px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0B2B40;
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: #1C5D6E;
+            margin: 4px 0 4px;
+        }
+
+        .job-date {
+            font-size: 13px;
+            color: #5b6e7c;
+            margin-bottom: 12px;
+        }
+
+        .job-list {
+            padding-left: 20px;
+        }
+
+        .job-list li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .diferenciais {
+            background: #eef2f5;
+            padding: 16px 20px;
+            border-radius: 16px;
+            margin-top: 16px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .icone-pequeno {
+            font-size: 14px;
+        }
+
+        @media (max-width: 750px) {
+            .sidebar, .main {
+                width: 100%;
+            }
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-bar {
+                justify-content: center;
+            }
+            .tagline {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- CABEÇALHO COM FOTO -->
+    <div class="header">
+        <div class="header-info">
+            <h1>JULIO CESAR<br>NATIVIDADE LUIZ</h1>
+            <div class="subtitle">Executivo de Finanças & Operações</div>
+            <div class="tagline">+10 anos gerando resultados com gestão orientada a dados, liderança de equipes e visão de dono.</div>
+            <div class="contact-bar">
+                <span>📍 Curitiba / Pontal do Paraná – PR</span>
+                <span>📞 (41) 99973-4907</span>
+                <span>✉️ julio_cnl@hotmail.com</span>
+                <span>🔗 linkedin.com/in/julio-cesar-natividade-luiz</span>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo-placeholder" id="fotoContainer">
+                <!-- 
+                    ⬇️⬇️⬇️ COLOQUE SUA FOTO AQUI ⬇️⬇️⬇️
+                    Substitua o texto "📸" pelo código abaixo (removendo as setas):
+                    
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQHwDJQ9VD-6wQ/profile-displayphoto-scale_400_400/B4EZvMUHjRIwAg-/0/1768659388696?e=1778112000&v=beta&t=OsXweopR4WfryDOv4KoocOEYaRpbDo_7ALpawCRmcSw" alt="Julio Cesar">
+                    
+                    Se a foto estiver no seu computador, use um site gratuito como:
+                    https://imgbb.com/ (upload gratuito) e cole o link direto da imagem.
+                -->
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQHwDJQ9VD-6wQ/profile-displayphoto-scale_400_400/B4EZvMUHjRIwAg-/0/1768659388696?e=1778112000&v=beta&t=OsXweopR4WfryDOv4KoocOEYaRpbDo_7ALpawCRmcSw" alt="Julio Cesar">
+            </div>
+        </div>
+    </div>
+
+    <div class="two-columns">
+        <!-- COLUNA ESQUERDA -->
+        <div class="sidebar">
+            <div class="info-block">
+                <div class="section-title">Perfil</div>
+                <p style="margin-top: 12px; font-size: 14px;">Executivo com visão sistêmica e forte senso de dono. Transformo cenários complexos em estratégias claras, lidero equipes de alta performance e impulsiono resultados consistentes.</p>
+            </div>
+
+            <div class="info-block">
+                <div class="section-title">Competências</div>
+                <div style="margin-top: 14px;">
+                    <span class="skill-tag">Gestão Financeira</span>
+                    <span class="skill-tag">Controle Orçamentário</span>
+                    <span class="skill-tag">KPIs</span>
+                    <span class="skill-tag">Power BI / Excel</span>
+                    <span class="skill-tag">Compliance</span>
+                    <span class="skill-tag">Liderança</span>
+                    <span class="skill-tag">Melhoria Contínua</span>
+                    <span class="skill-tag">Negociação</span>
+                    <span class="skill-tag">Tomada de Decisão</span>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="section-title">Formação</div>
+                <p><strong>🎓 Administração de Empresas</strong><br>FAE Centro Universitário (2019)</p>
+                <p style="margin-top: 12px;"><strong>🎓 MBA Gestão Empresarial, Inovação e Estratégia</strong><br>IPOG (Cursando)</p>
+            </div>
+
+            <div class="info-block">
+                <div class="section-title">Idiomas</div>
+                <p>🇵🇹 Português – Nativo</p>
+                <p>🇺🇸 Inglês – Intermediário</p>
+            </div>
+
+            <div class="diferenciais">
+                <div class="section-title" style="margin-bottom: 10px;">Diferenciais</div>
+                <p>✔ Mentalidade empreendedora<br>✔ Visão de dono<br>✔ Alta execução sob pressão<br>✔ Comunicação persuasiva</p>
+            </div>
+        </div>
+
+        <!-- COLUNA PRINCIPAL -->
+        <div class="main">
+            <div class="section-title">Experiência de Destaque</div>
+
+            <div class="job" style="margin-top: 18px;">
+                <div class="job-title">Diretor / Gestor Geral</div>
+                <div class="job-company">SE TECH CENTRO DE REPAROS EIRELI</div>
+                <div class="job-date">02/2018 – Atual</div>
+                <ul class="job-list">
+                    <li>Estruturei a gestão financeira com controle orçamentário e análise contínua de resultados – garantindo saúde financeira e crescimento sustentável.</li>
+                    <li>Criei relatórios gerenciais que aumentaram a clareza na tomada de decisão e permitiram ajustes rápidos de estratégia.</li>
+                    <li>Melhorei processos internos, aumentando produtividade e reduzindo gargalos operacionais.</li>
+                    <li>Defini e acompanhei metas financeiras e operacionais com base em KPIs.</li>
+                    <li>Implementei práticas de controle, auditoria e compliance, mitigando riscos regulatórios.</li>
+                    <li>Negociei contratos comerciais, contribuindo diretamente para a rentabilidade do negócio.</li>
+                    <li>Liderei equipes (recrutamento, rotinas, objetivos) e fortaleci o clima organizacional.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Aperfeiçoamento Profissional</div>
+                <div class="job-company">LONGLAB – São Paulo/SP</div>
+                <div class="job-date">01/2017 – 01/2018</div>
+                <ul class="job-list">
+                    <li>Análise de KPIs e resultados para reparos técnicos.</li>
+                    <li>Uso de softwares de gestão de processos e criação de planilhas para indicadores de desempenho.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Auxiliar Administrativo</div>
+                <div class="job-company">PONTO DO GAME – Curitiba/PR</div>
+                <div class="job-date">01/2010 – 01/2017</div>
+                <ul class="job-list">
+                    <li>Emissão de notas fiscais, delegação de atividades, atendimento ao cliente.</li>
+                    <li>Controle financeiro (faturas, boletos), planilhas de gestão e expedição de documentos.</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="section-title">Objetivo Profissional</div>
+            <p style="margin-top: 12px;">Atuar em posições estratégicas nas áreas de <strong>finanças, logística ou gestão</strong>, contribuindo com visão analítica, experiência prática e foco em <strong>crescimento sustentável, geração de resultados e eficiência operacional</strong>.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // CASO QUEIRA, VOCÊ PODE SUBSTITUIR O CONTEÚDO DA FOTO DIRETAMENTE NO HTML
+    // Exemplo descomentado (remova as barras e coloque sua URL):
+    // document.getElementById('fotoContainer').innerHTML = '<img src="https://seusite.com/sua-foto.jpg" alt="Julio Cesar">';
+</script>
+</body>
+</html>
